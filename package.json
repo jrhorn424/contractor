@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "description": "An interactive tool for testing APIs.",
   "private": true,
-  "main": "index.js",
   "bin": {
-    "contractor": "./index.js"
+    "contractor": "./bin/contractor"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,8 +20,9 @@
   },
   "homepage": "https://github.com/ga-wdi-boston/contractor#readme",
   "dependencies": {
+    "commander": "^2.9.0",
+    "inquirer": "^1.1.2",
     "superagent": "^2.0.0",
-    "superagent-promise-plugin": "^3.2.0",
-    "vorpal": "^1.11.2"
+    "superagent-promise-plugin": "^3.2.0"
   }
 }

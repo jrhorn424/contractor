@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const program = require('commander');
+
+const crud = require('../spec/crud');
+
+program
+.parse(process.argv);
+
+crud.all()
+.catch(console.error)
+;

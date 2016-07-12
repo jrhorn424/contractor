@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const program = require('commander');
+
+const authentication = require('../spec/authentication');
+
+program
+.parse(process.argv);
+
+authentication.all()
+.catch(console.error)
+;

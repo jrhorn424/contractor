@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const program = require('commander');
+
+const spec = require('../spec');
+
+program
+.parse(process.argv);
+
+spec.all()
+.catch(console.error)
+;

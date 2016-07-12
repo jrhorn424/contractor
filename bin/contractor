@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+// TODO store API host
+// TODO prompt for API host if it isn't present
+// TODO test conditions for each success handler
+// TODO build output table for command line
+
+'use strict';
+
+const program = require('commander');
+
+program
+.command('all [resources]',
+         'Run all request specs for one or more resources, including ' +
+         'authentication.')
+.command('authentication', 'Run only authentication request specs')
+.command('authorization [resources]', 'Run only authorization request specs ' +
+         'for the specified resources')
+.command('crud [resources]',
+         'Run only CRUD request specs for the specified resources. Does not ' +
+         'include authorization request specs.')
+.parse(process.argv);
